@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/algor/documents/progr/ProgrPython3/ch11'
+let g:netrw_dirhist_2='/home/algor/documents/progr/ProgrPython3/py30eg'
+let g:netrw_dirhist_3='/opt/lampp/share/mysql/charsets'
+let g:netrw_dirhist_4='/home/algor'
+let g:netrw_dirhist_5='/home/algor/.AbiSuite'
+let g:netrw_dirhist_6='/home/algor'
+let g:netrw_dirhist_7='/home/algor/.AbiSuite'
+let g:netrw_dirhist_8='/home/algor/works/template'
+let g:netrw_dirhist_9='/home/algor/works/template/styles'
