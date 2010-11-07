@@ -11,7 +11,6 @@ set ruler                               "постоянно показывать
 set number                              "показывать номера строк
 set incsearch                           "показывать первое совпадение при наборе шаблона
 set hlsearch                            "подсветка найденного
-set mouse=a                             "используем мышку
 set autoindent                          "включаем умные отступы
 set smartindent
 set ai                                  "при начале новой строки, отступ копируется из предыдущей
@@ -41,12 +40,12 @@ set noex                                "не читаем файл конфиг
 " set listchars=tab:→→,trail:⋅
 set foldlevel=10000                     "Открывать всё!
 
-" Проверка орфографии
-set spelllang=ru_yo,en_us
+set gdefault                            "Замена всего по умолчанию (при использовании %s//)
+set clipboard=unnamed,exclude:cons\\\|linux " Буфер по умолчанию - системный
 
 "-------------------------------------------------------------------------------------
 
-colorscheme wombat256                   "цветовая схема для терминала
+colorscheme inkpot                   "цветовая схема для терминала
 syntax on                               "включаем подсветку синтаксиса
 filetype on
 filetype plugin on
@@ -72,7 +71,7 @@ if has ("gui_running")
     "font
     set guifont=DejaVu\ Sans\ Mono\ 16
     "используем эту цветовую схему
-    colorscheme wombat256
+    colorscheme inkpot
 endif
 
 " Компиляция по F7
@@ -86,6 +85,8 @@ endif
 command W w !sudo tee % > /dev/null
 
 " Настройка привязок клавиш
+let mapleader = ","
+
 map <F7> <Esc>:make<CR>
 imap <F7> <Esc>:make<CR>
 vmap <F7> <Esc>:make<CR>
@@ -101,6 +102,20 @@ vmap <F3> <Esc>:BufExplorer<CR>
 map <F4> <Esc>:TlistToggle<CR>
 imap <F4> <Esc>:TlistToggle<CR>
 vmap <F4> <Esc>:TlistToggle<CR>
+
+" Убираем неправильные клавиши подальше
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+
 
 "-------------------------------------------------------------------------------------
 
